@@ -20,5 +20,6 @@
   "homepage": "https://github.com/mattylaw192/HotRestaurant#readme",
   "dependencies": {
     "express": "^4.16.4"
-  }
+  },
+  "devDependencies": {}
 }
