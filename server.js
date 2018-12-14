@@ -21,6 +21,7 @@ server.listen(PORT,function(){
     console.log("Server listening on: http://localhost:" + PORT);
 });
 
+<<<<<<< HEAD
 var customers = [
     {
         routeName:
@@ -58,3 +59,18 @@ var customers = [
         uniqueID:
     },
 ]
+=======
+//routes
+
+app.get("/", function(err, res){
+    res.sendFile(path.join(__dirname, "view.html"));
+});
+
+app.get("/reserve", function(err,res){
+    res.sendFile(path.join(__dirname, "reserve.html"));
+});
+
+app.get("/tables", function(err, res){
+    res.sendFile(path.join(__dirname, "tables.html"));
+});
+>>>>>>> ac44040a6d3990301393d78ced633f26115e6aca
