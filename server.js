@@ -20,3 +20,17 @@ var server = http.createServer(handleRequest);
 server.listen(PORT,function(){
     console.log("Server listening on: http://localhost:" + PORT);
 });
+
+//routes
+
+app.get("/", function(err, res){
+    res.sendFile(path.join(__dirname, "view.html"));
+});
+
+app.get("/reserve", function(err,res){
+    res.sendFile(path.join(__dirname, "reserve.html"));
+});
+
+app.get("/tables", function(err, res){
+    res.sendFile(path.join(__dirname, "tables.html"));
+});
