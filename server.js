@@ -10,10 +10,10 @@ var path = require("path");
 var app = express();
 var PORT = 3000;
 
-var tables = []
+var tables = [];
 
-var waitingList = []
-b
+var waitingList = [];
+
 
 function handleRequest(request, response){
     response.end("User hit PORT url.")
@@ -28,7 +28,7 @@ server.listen(PORT,function(){
 //routes
 
 app.get("/", function(err, res){
-    res.sendFile(path.join(__dirname, "view.html"));
+    res.sendFile(path.join(__dirname, "home.html"));
 });
 
 app.get("/reserve", function(err,res){
@@ -36,5 +36,5 @@ app.get("/reserve", function(err,res){
 });
 
 app.get("/tables", function(err, res){
-    res.sendFile(path.join(__dirname, "tables.html"));
+    res.sendFile(path.join(__dirname, "view.html"));
 });
