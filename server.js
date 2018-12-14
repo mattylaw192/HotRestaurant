@@ -8,7 +8,7 @@ var path = require("path");
 //Set up express App//
 
 var app = express();
-var PORT = 3000;
+var PORT = 3005;
 
 var tables = [];
 
@@ -21,20 +21,20 @@ function handleRequest(request, response){
 
 var server = http.createServer(handleRequest); 
 
-server.listen(PORT,function(){
+app.listen(PORT,function(){
     console.log("Server listening on: http://localhost:" + PORT);
 });
 
 //routes
 
-app.get("/", function(err, res){
+app.get("/", function(req, res){
     res.sendFile(path.join(__dirname, "home.html"));
 });
 
-app.get("/reserve", function(err,res){
+app.get("/reserve", function(req,res){
     res.sendFile(path.join(__dirname, "reserve.html"));
 });
 
-app.get("/tables", function(err, res){
+app.get("/tables", function(req, res){
     res.sendFile(path.join(__dirname, "view.html"));
 });
